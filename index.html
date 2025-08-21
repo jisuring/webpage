@@ -1,11 +1,368 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>지선 테스트</title>
+    <title>Js</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script defer src="js/main.js"></script>
 </head>
+
 <body>
-    <h1>TEST ~ </h1>
+
+    <div class="wrap">
+        <header>
+            <div class="size-desktop">
+                <div class="logo" onclick="smoothScroll('#home')"></div>
+
+                <div class="header-right">
+                    <i class="color-mode-bt"></i>
+                    <div class="header-menu">
+                        <ul>
+                            <li onclick="minMenuClose(), smoothScroll('#home')">HOME</li>
+                            <li onclick="minMenuClose(), smoothScroll('#about')">ABOUT</li>
+                            <li onclick="minMenuClose(), smoothScroll('#stack')">STACK</li>
+                            <li onclick="minMenuClose(), smoothScroll('#work')">WORK</li>
+                            <li onclick="minMenuClose(), smoothScroll('#contact')">CONTACT</li>
+                        </ul>
+                    </div>
+                    <i class="header-menu-bt"></i>
+                    <i class="header-min-bt"></i>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="cursor"></div>
+
+            <nav>
+                <ul>
+                    <li class="nav-ckd" onclick="smoothScroll('#home')"></li>
+                    <li onclick="smoothScroll('#about')"></li>
+                    <li onclick="smoothScroll('#stack')"></li>
+                    <li onclick="smoothScroll('#work')"></li>
+                    <li onclick="smoothScroll('#contact')"></li>
+                </ul>
+            </nav>
+            <section id="home" class="active">
+                <div class="section-home">
+                    <div>
+                        <div class="main-background">
+                            <img src="img/mainbackground.jpeg" alt="메인 이미지">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="home-text-box">
+                            <div class="home-text-main home-text-main-mov">
+                                <div>
+                                    <span>W</span><span>e</span><span>b</span>
+                                </div>
+                                <div>
+                                    <span>P</span>
+                                    <span>u</span>
+                                    <span>b</span>
+                                    <span>l</span>
+                                    <span>i</span>
+                                    <span>s</span>
+                                    <span>h</span>
+                                    <span>e</span>
+                                    <span>r</span>
+                                </div>
+                            </div>
+                            <i></i>
+
+                            <p>
+                                <!-- 웹 퍼블리셔 지선입니다. <br /> -->
+                                웹사이트의 시각적 디자인과 기술적 구현을 결합하여 사용자에게 <br />
+                                최적의 온라인 경험을 제공하는 데 열정적인 웹 퍼블리셔입니다.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <i class="scroll-down" onclick="smoothScroll('#about')">
+
+                    </i>
+                    <div class="home-bg"></div>
+                </div>
+            </section>
+
+            <section class="section-about" id="about">
+                <div class="size-desktop">
+                    <div class="about-left">
+                        <h1><span>About</span></h1>
+                        <h1>Jiseon</h1>
+
+                        <div class="about-img">
+                            <img src="img/about.jpg" alt="sample">
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <div>
+                            <p>
+                                안녕하세요! 3년차 웹 퍼블리셔 지선입니다. <br />
+                                <br />
+                                웹사이트를 기획, 디자인, 개발해왔으며,
+                                이 과정에서 효과적인 사용자 인터페이스(UI)와 사용자 경험(UX) 디자인의 중요성을
+                                깊이 이해하게 되었습니다. <br />
+                                <br />
+                                웹 접근성과 웹 표준을 고려한 웹 페이지를 만들며, <br />
+                                HTML, CSS, JavaScript를 포함한 최신 웹 기술에 능숙합니다. <br />
+                                원활한 협업으로 훌륭한 사용자 경험을 구축하는 데 집중하고 싶습니다.
+
+                            </p>
+                            <button
+                                onclick="window.open('https://jiseonpf.notion.site/e213a2e97bc9408596abc65028952984?pvs=4')">
+                                자기소개 더보기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-stack" id="stack">
+                <div class="line-img">
+                    <img src="img/work-background.png" alt="sample">
+                </div>
+                <div class="size-laptop">
+                    <h1>
+                        Tech Stack
+                    </h1>
+                    <ul class="stack-box">
+                        <li>
+                            <h2>
+                                Design Tech.
+                            </h2>
+                            <div>
+                                <ul>
+                                    <li>
+                                        디자인 가이드를 세우고, 그에 따라 통일성 있고 일관적인 UI를 제작하여 재활용이 가능하고 빠른 개발이 가능하도록 하는 것을 지향하고 있습니다.
+                                    </li>
+                                    <li>
+                                        레이아웃 배치, 컬러 사용 시 사용자 입장에서의 사용성을 고려하며 불편함이 없도록 디자인하고자 노력합니다.
+                                    </li>
+                                    <li>
+                                        여러 사람의 의견을 반영하고 더 나은 결과물을 만들기 위해, 여러 시안을 가지고 팀원들과 논의하여 최종 결과물을 도출합니다.
+                                    </li>
+                                    <li>
+                                        Photoshop, Illustrator를 이용한 디자인 및 편집 작업이 가능합니다.
+                                    </li>
+                                    <li>
+                                        Figma를 이용한 UX/UI 설계와 프로토타이핑이 가능합니다.
+                                    </li>
+                                </ul>
+                                <div class="stack-hash">
+                                    <span>#Photoshop</span>
+                                    <span>#Illustrator</span>
+                                    <span>#Figma</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h2>
+                                Develop Tech.
+                            </h2>
+                            <div>
+                                <ul>
+                                    <li>협업을 위해 재활용과 유지보수가 쉬운 코드를 짤 수 있도록 더 좋은 방법에 대해 끊임없이 생각하며, 여러 가능성 및 예외 상황에 대해 고려하며
+                                        개발을 진행합니다.</li>
+                                    <li>CSS, SCSS 등을 통해 디자인 결과물과 흡사하게 웹에 구현해 낼 수 있으며 반응형 웹 퍼블리싱이 가능합니다.</li>
+                                    <li>표준과 웹 접근성 준수, SEO 최적화를 위해 페이지 구조와 태그의 의미를 고려하며 마크업하는 것을 지향합니다.</li>
+                                </ul>
+                                <div class="stack-hash">
+                                    <span>#HTML5</span>
+                                    <span>#CSS3</span>
+                                    <span>#SCSS</span>
+                                    <span>#Styled-Component</span>
+                                    <span>#Javascript(ES6+)</span>
+                                    <span>#JQuery</span>
+                                    <span>#React.js</span>
+                                    <!-- <span>#Next.js</span> -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section-work" id="work">
+                <div class="home-bg"></div>
+                <div class="size-desktop">
+                    <h1>
+                        Work
+                    </h1>
+
+                    <div class="work-box">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="work-prj">
+
+                                        <div class="work-prj-img">
+                                            <img src="img/kthulu.png" alt="sample">
+                                        </div>
+
+                                        <div class="work-prj-cont">
+                                            <div>
+                                                <div class="work-prj-date">
+                                                    <h2>Kthulu Wallet</h2>
+                                                    <div>2023<span>@주식회사에이비씨</span></div>
+                                                </div>
+
+                                                <p>
+                                                    블록체인 지갑 프로젝트 <br />
+                                                    웹/앱에서 사용 가능한 Token&NFT Wallet 퍼블리싱
+                                                </p>
+                                                <div class="stack-hash">
+                                                    <span>#Markup</span><span>#Sass</span><span>#Javascript</span><span>#Git</span>
+                                                </div>
+                                            </div>
+
+                                            <button onclick="LayerOpen(1)">자세히보기</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work-prj">
+
+                                        <div class="work-prj-img">
+                                            <img src="img/transbridge.png" alt="sample">
+                                        </div>
+
+                                        <div class="work-prj-cont">
+                                            <div>
+                                                <div class="work-prj-date">
+                                                    <h2>Transbridge</h2>
+                                                    <div>2023<span>@주식회사에이비씨</span></div>
+                                                </div>
+
+                                                <p>
+                                                    ABC Transbridge는 유동성 풀 기반의 보안 중심 브릿지이자 <br />
+                                                    점점 더 많은 블록체인을 연결하고 모든 주요 블록체인을 서로 연결하는 <br />
+                                                    커뮤니티 브리징 프로토콜입니다.
+                                                </p>
+
+                                                <div class="stack-hash">
+                                                    <span>#Markup</span><span>#Sass</span><span>#반응형</span><span>#Javascript</span>
+                                                    <span>#Git</span>
+                                                </div>
+                                            </div>
+
+                                            <button onclick="LayerOpen(0)">자세히보기</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work-prj">
+
+                                        <div class="work-prj-img">
+                                            <img src="img/heavenart.png" alt="sample">
+                                        </div>
+
+                                        <div class="work-prj-cont">
+                                            <div>
+                                                <div class="work-prj-date">
+                                                    <h2>Heaven ART</h2>
+                                                    <div>2022<span>@주식회사에이비씨</span></div>
+                                                </div>
+
+                                                <p>
+                                                    NFT Create, Mint, Sell이 가능한 Market place 입니다. <br />
+                                                    Token, Wallet, Swap, panel 네가지 관리자 기능을 지원합니다.
+                                                </p>
+
+                                                <div class="stack-hash">
+                                                    <span>#Markup</span><span>#Sass</span><span>#반응형</span><span>#Javascript</span>
+                                                </div>
+                                            </div>
+
+                                            <button onclick="LayerOpen(2)">자세히보기</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work-prj">
+
+                                        <div class="work-prj-img">
+                                            <img src="img/abchome-thum.png" alt="sample" style="object-position: left;">
+                                        </div>
+
+                                        <div class="work-prj-cont">
+                                            <div>
+                                                <div class="work-prj-date">
+                                                    <h2>ABC Home</h2>
+                                                    <div>2022<span>@주식회사에이비씨</span></div>
+                                                </div>
+
+                                                <p>
+                                                    에이비씨 메인 페이지를 제작했습니다.
+                                                </p>
+
+                                                <div class="stack-hash">
+                                                    <span>#Markup</span><span>#Sass</span><span>#반응형</span><span>#Javascript</span>
+                                                </div>
+                                            </div>
+
+                                            <button onclick="LayerOpen(3)">자세히보기</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <!-- <div class="work-box-info">
+                            프로젝트 업데이트 중입니다
+                        </div> -->
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section-contect" id="contact">
+                <div class="size-desktop">
+                    <div class="contact">
+                        <p>
+                            <span>저에 대해 더 궁금한 점이 있으신가요? </span><br />
+                            아래 주소로 메일을 보내주세요! 😊
+                        </p>
+                        <a href="mailto:jiseonllito@gmail.com">
+                            <i></i>
+                            <div class="email-txt">jiseonllito@gmail.com</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="layer">
+                <div class="layer-inner">
+                    <div class="close-icon" onclick="layerClose(this)"><i></i></div>
+                    <div class="prj-detail">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- <div id="floating-circle"></div> -->
+        <footer>
+
+            본 페이지는 상업적 목적이 아닌<br />
+            개인 포트폴리오용으로 제작되었습니다.<br />
+            <br />
+            <span>© 2024 Kim-ji-seon. All Rights Reserved.</span>
+
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/option.js"></script>
 </body>
+
 </html>
